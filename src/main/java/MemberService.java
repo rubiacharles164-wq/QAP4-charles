@@ -35,7 +35,7 @@ public class MemberService {
     }
 
     public Member findByTournamentDate(LocalDate StartDate) {
-        List<Member> MemberLocator = memberRepository.findBytournamentDate(StartDate);
+        List<Member> MemberLocator = memberRepository.findByTournamentDate(StartDate);
 
         return (Member) MemberLocator;
     }

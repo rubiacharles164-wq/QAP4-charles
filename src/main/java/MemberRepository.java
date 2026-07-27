@@ -13,5 +13,5 @@ public interface MemberRepository extends CrudRepository<Member, Long>{
 
     List<Member> findByNameContainingIgnoreCase(String keyword);
 
-    List<Member> findBytournamentDate(LocalDate tournamentDate);
+    List<Member> findByTournamentDate(LocalDate tournamentDate);
 }
