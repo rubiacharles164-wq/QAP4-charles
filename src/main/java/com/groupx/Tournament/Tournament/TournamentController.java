@@ -19,12 +19,12 @@ public class TournamentController {
         return tournamentService.getAllTournamentS();
     }
 
-    @GetMapping("/Tournaments/{StartDate}")
+    @GetMapping("/Tournaments/StartDate/{StartDate}")
     public Tournament getTournamentByStartDate(@PathVariable String StartDate) {
         return tournamentService.findByTournamentDate(LocalDate.parse(StartDate));
     }
 
-    @GetMapping("/Tournaments/{Location}")
+    @GetMapping("/Tournaments/Location/{Location}")
     public Tournament getTournamentByLocation(@PathVariable String Location) {
         return tournamentService.findByLocation(Location);
     }
@@ -34,7 +34,7 @@ public class TournamentController {
         return tournamentService.addTournament(tournament);
     }
 
-    @GetMapping("/Members/{StartDate}")
+    @GetMapping("/Members/StartDate/{StartDate}")
     public Tournament findMembersByStartDate(@PathVariable String StartDate) {
         return tournamentService.findMembersbyStartDate(StartDate);
     }

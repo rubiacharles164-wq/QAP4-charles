@@ -17,17 +17,17 @@ public class MemberController {
         return memberService.getAllMembers();
     }
 
-    @GetMapping("/Members/{MemberName}")
+    @GetMapping("/Members/Name/{MemberName}")
     public Member getMemberByName(@PathVariable String MemberName) {
         return memberService.getMemberByName(MemberName);
     }
 
-    @GetMapping("/Members/{MembershipType}")
+    @GetMapping("/Members/Type/{MembershipType}")
     public Member getMemberByMemberShip(@PathVariable String MembershipType) {
         return memberService.getMemberByType(MembershipType);
     }
 
-    @GetMapping("/Members/{PhoneNum}")
+    @GetMapping("/Members/PhoneNum/{PhoneNum}")
     public Member getMemberByPhoneNum(@PathVariable String PhoneNum) {
         return memberService.getMemberByPhoneNum(PhoneNum);
     }
