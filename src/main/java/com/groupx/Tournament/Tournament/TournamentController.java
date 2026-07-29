@@ -35,7 +35,7 @@ public class TournamentController {
     }
 
     @GetMapping("/Members/{StartDate}")
-    public Tournament findMembersByStartDate(@PathVariable LocalDate StartDate) {
+    public Tournament findMembersByStartDate(@PathVariable String StartDate) {
         return tournamentService.findMembersbyStartDate(StartDate);
     }
 

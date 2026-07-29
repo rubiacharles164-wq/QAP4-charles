@@ -12,7 +12,7 @@ public interface TournamentRepository extends CrudRepository<Tournament, Long> {
 
     List<Tournament> findTournamentByStartDate(LocalDate tournamentDate);
 
-    List<Tournament> findMembersByStartDate(LocalDate StartDate);
+    List<Tournament> findMembersByStartDate(String StartDate);
 
 
 }

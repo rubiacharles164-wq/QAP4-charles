@@ -52,7 +52,7 @@ public class TournamentService {
         return tournamentRepository.save(newTournament);
     }
 
-    public Tournament findMembersbyStartDate(LocalDate StartDate) {
+    public Tournament findMembersbyStartDate(String StartDate) {
         return (Tournament) tournamentRepository.findMembersByStartDate(StartDate);
     }
 

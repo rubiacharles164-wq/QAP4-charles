@@ -12,8 +12,8 @@ public class Tournament {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long TournamentID;
-    private LocalDate StartDate;
-    private LocalDate EndDate;
+    private String StartDate;
+    private String EndDate;
     private String Location;
     private String PrizeAmount;
 
@@ -28,19 +28,19 @@ public class Tournament {
         this.TournamentID = TournamentID;
     }
 
-    public LocalDate getStartDate() {
+    public String getStartDate() {
         return StartDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(String startDate) {
         StartDate = startDate;
     }
 
-    public LocalDate getEndDate() {
+    public String getEndDate() {
         return EndDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(String endDate) {
         EndDate = endDate;
     }
 
