@@ -1,5 +1,6 @@
-package Tournament;
+package com.groupx.Tournament.Tournament;
 
+import com.groupx.Member.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class TournamentService {
     }
 
     public Tournament findByTournamentDate(LocalDate StartDate) {
-        List<Tournament> TournamentLocator = tournamentRepository.findByTournamentDate(StartDate);
+        List<Tournament> TournamentLocator = tournamentRepository.findTournamentByStartDate(StartDate);
 
         return (Tournament) TournamentLocator;
     }
@@ -29,5 +30,9 @@ public class TournamentService {
 
     public Tournament addTournament(Tournament newTournament) {
         return tournamentRepository.save(newTournament);
+    }
+
+    public Tournament findMembersbyStartDate(LocalDate StartDate) {
+        return (Tournament) tournamentRepository.findMembersByStartDate(StartDate);
     }
 }

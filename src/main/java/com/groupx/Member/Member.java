@@ -1,12 +1,9 @@
-package Member;
+package com.groupx.Member;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.groupx.Tournament.Tournament.Tournament;
+import jakarta.persistence.*;
 
 import java.util.Date;
-
 
 
 @Entity
@@ -19,8 +16,10 @@ public class Member {
     private String Email;
     private String PhoneNum;
     private Date Date;
-    private String MembershipType;
+    private String MemberShipType;
 
+    public Member(Tournament tournament) {
+    }
 
     public long getID() {
         return ID;
@@ -70,12 +69,12 @@ public class Member {
         Date = date;
     }
 
-    public String getMembershipType() {
-        return MembershipType;
+    public String getMemberShipType() {
+        return MemberShipType;
     }
 
-    public void setMembershipType(String membershipType) {
-        MembershipType = membershipType;
+    public void setMemberShipType(String memberShipType) {
+        MemberShipType = memberShipType;
     }
 
     

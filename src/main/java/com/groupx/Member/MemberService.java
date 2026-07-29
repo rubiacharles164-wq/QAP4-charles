@@ -1,4 +1,4 @@
-package Member;
+package com.groupx.Member;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,28 +19,23 @@ public class MemberService {
     }
 
     public Member getMemberByName(String MemberName) {
-        List<Member> MemberLocator = memberRepository.findByNameIgnoreCase(MemberName);
+        List<Member> MemberLocator = memberRepository.findMemberByMemberName(MemberName);
 
         return (Member) MemberLocator;
     }
 
     public Member getMemberByType(String MemberType) {
-        List<Member> MemberLocator = memberRepository.findByNameContainingIgnoreCase(MemberType);
+        List<Member> MemberLocator = memberRepository.findMemberByMemberShipType(MemberType);
 
         return (Member) MemberLocator;
     }
 
     public Member getMemberByPhoneNum(String PhoneNum) {
-        List<Member> MemberLocator = memberRepository.findByNameContainingIgnoreCase(PhoneNum);
+        List<Member> MemberLocator = memberRepository.findMemberByPhoneNum(PhoneNum);
 
         return (Member) MemberLocator;
     }
 
-    public Member findByTournamentDate(LocalDate StartDate) {
-        List<Member> MemberLocator = memberRepository.findByTournamentDate(StartDate);
-
-        return (Member) MemberLocator;
-    }
 
     public Member addNewMember(Member newMember) {
         return memberRepository.save(newMember);

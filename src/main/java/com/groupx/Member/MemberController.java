@@ -1,4 +1,4 @@
-package Member;
+package com.groupx.Member;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,11 +22,6 @@ public class MemberController {
         return memberService.getMemberByName(MemberName);
     }
 
-    @GetMapping("/Members/{StartDate}")
-    public Member getMemberByStartDate(@PathVariable String StartDate) {
-        return memberService.findByTournamentDate(LocalDate.parse(StartDate));
-    }
-
     @GetMapping("/Members/{MembershipType}")
     public Member getMemberByMemberShip(@PathVariable String MembershipType) {
         return memberService.getMemberByType(MembershipType);
@@ -37,10 +32,12 @@ public class MemberController {
         return memberService.getMemberByPhoneNum(PhoneNum);
     }
 
+
     @PostMapping("/Members")
     public Member AddMember(@RequestBody Member member){
         return memberService.addNewMember(member);
     }
 }
+
 
 

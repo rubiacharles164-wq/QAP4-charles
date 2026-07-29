@@ -1,4 +1,4 @@
-package Member;
+package com.groupx.Member;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -9,9 +9,13 @@ import java.util.List;
 
 @Repository
 public interface MemberRepository extends CrudRepository<Member, Long>{
-    List<Member> findByNameIgnoreCase(String Name);
 
-    List<Member> findByNameContainingIgnoreCase(String keyword);
 
-    List<Member> findByTournamentDate(LocalDate tournamentDate);
+    List<Member> findMemberByMemberName(String MemberName);
+
+    List<Member> findMemberByPhoneNum(String PhoneNum);
+
+    List<Member> findMemberByMemberShipType(String MemberType);
+
+
 }

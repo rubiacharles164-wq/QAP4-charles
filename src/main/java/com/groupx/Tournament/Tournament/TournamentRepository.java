@@ -1,8 +1,10 @@
-package Tournament;
+package com.groupx.Tournament.Tournament;
 
+import com.groupx.Member.Member;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.sql.ClientInfoStatus;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -10,6 +12,9 @@ import java.util.List;
 public interface TournamentRepository extends CrudRepository<Tournament, Long> {
     List<Tournament> findByLocation(String location);
 
-    List<Tournament> findByTournamentDate(LocalDate tournamentDate);
+    List<Tournament> findTournamentByStartDate(LocalDate tournamentDate);
+
+    List<Tournament> findMembersByStartDate(LocalDate StartDate);
+
 
 }

@@ -1,4 +1,4 @@
-package Tournament;
+package com.groupx.Tournament.Tournament;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -32,4 +32,10 @@ public class TournamentController {
     public Tournament AddTournament(@RequestBody Tournament tournament){
         return tournamentService.addTournament(tournament);
     }
+
+    @GetMapping("/Members/{StartDate}")
+    public Tournament findMembersByStartDate(@PathVariable LocalDate StartDate) {
+        return tournamentService.findMembersbyStartDate(StartDate);
+    }
+
 }

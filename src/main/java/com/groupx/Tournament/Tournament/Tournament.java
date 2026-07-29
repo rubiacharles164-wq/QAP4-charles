@@ -1,10 +1,7 @@
-package Tournament;
+package com.groupx.Tournament.Tournament;
 
-import Member.Member;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.groupx.Member.Member;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -20,8 +17,8 @@ public class Tournament {
     private String Location;
     private String PrizeAmount;
 
+    @ManyToMany
     private List<Member> ParticipatingMembers = new ArrayList<>();
-
 
     public Long getID() {
         return ID;
