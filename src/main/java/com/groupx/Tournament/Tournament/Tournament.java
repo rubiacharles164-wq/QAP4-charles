@@ -11,7 +11,7 @@ import java.util.List;
 public class Tournament {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
+    private Long TournamentID;
     private LocalDate StartDate;
     private LocalDate EndDate;
     private String Location;
@@ -20,12 +20,12 @@ public class Tournament {
     @ManyToMany
     private List<Member> ParticipatingMembers = new ArrayList<>();
 
-    public Long getID() {
-        return ID;
+    public Long getTournamentID() {
+        return TournamentID;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setTournamentID(Long TournamentID) {
+        this.TournamentID = TournamentID;
     }
 
     public LocalDate getStartDate() {

@@ -1,6 +1,7 @@
 package com.groupx.Tournament.Tournament;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -38,4 +39,11 @@ public class TournamentController {
         return tournamentService.findMembersbyStartDate(StartDate);
     }
 
+//    @PostMapping("/{TournamentID}/registar/{MemberID")
+//    public ResponseEntity<Tournament> registartParticipatingMember(
+//            @PathVariable Long TournamentID,
+//            @PathVariable Long MemberID) {
+//        Tournament updated = tournamentService.registartParticipatingMember(TournamentID, MemberID);
+//        return ResponseEntity.ok(updated);
+//    }
 }

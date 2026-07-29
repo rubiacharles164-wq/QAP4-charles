@@ -10,7 +10,7 @@ import java.util.Date;
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    private long MemberID;
     private String MemberName;
     private String MailingAddress;
     private String Email;
@@ -21,12 +21,12 @@ public class Member {
     public Member(Tournament tournament) {
     }
 
-    public long getID() {
-        return ID;
+    public long getMemberID() {
+        return MemberID;
     }
 
-    public void setID(long ID) {
-        this.ID = ID;
+    public void setMemberID(long MemberID) {
+        this.MemberID = MemberID;
     }
 
     public String getMemberName() {

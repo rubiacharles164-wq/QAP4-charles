@@ -1,10 +1,8 @@
 package com.groupx.Tournament.Tournament;
 
-import com.groupx.Member.Member;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.sql.ClientInfoStatus;
 import java.time.LocalDate;
 import java.util.List;
 
